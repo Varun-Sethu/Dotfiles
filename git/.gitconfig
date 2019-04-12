@@ -1,0 +1,10 @@
+[user]
+	email = varun.sethu1@education.nsw.gov,au
+	name = Varun-Sethu
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+[commit]
+	template = /home/varun/.gitcommitmessage.txt
+[push]
+	default = simple
