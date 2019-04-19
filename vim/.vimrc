@@ -8,7 +8,7 @@ call vundle#begin()
 " Vundle plugin
 Plugin 'gmarik/Vundle.vim'
 
-" NERDTree
+" NERDTree and multi-cursor
 Plugin 'scrooloose/nerdtree'
 
 "Editing Themei && Airline 
@@ -29,7 +29,6 @@ Plugin 'davidhalter/jedi-vim'
 call vundle#end()      
 filetype plugin indent on
 "ND PLUGIN CONFIGURATION
-
 
 
 
@@ -76,10 +75,17 @@ set background=dark
 let g:palenight_terminal_italics=1
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 "automatically include closing brace
-inoremap { {<CR>}<Esc>ko
+inoremap { {<Space>}ko
+inoremap [ [<Space>]ko
+
 " YCM remove the preview window upon selection
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+"Buffer resize helper tools
+nnoremap <D-left> :vertical resize -5<cr>
+nnoremap <D-down> :resize +5<cr>
+nnoremap <D-up> :resize -5<cr>
+nnoremap <D-right> :vertical resize +5<cr>
 
 
 
