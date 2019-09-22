@@ -74,9 +74,10 @@ colorscheme palenight
 set background=dark
 let g:palenight_terminal_italics=1
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
+
 "automatically include closing brace
-inoremap { {<Space>}ko
-inoremap [ [<Space>]ko
+inoremap { {<Space>}
 
 " YCM remove the preview window upon selection
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
@@ -86,7 +87,6 @@ nnoremap <D-left> :vertical resize -5<cr>
 nnoremap <D-down> :resize +5<cr>
 nnoremap <D-up> :resize -5<cr>
 nnoremap <D-right> :vertical resize +5<cr>
-
 
 
 " True colors configuration 

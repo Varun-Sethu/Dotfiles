@@ -115,3 +115,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+export DOCKER_HOST=tcp://localhost:2375
+export GOPATH=/mnt/c/Users/varun/linux/programming/go
+

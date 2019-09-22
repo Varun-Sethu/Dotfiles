@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
- export ZSH="/home/varun/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="lambda-mod"
+ZSH_THEME="spaceship"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 ### Added by Zplugin's installer
-source '/home/varun/.zplugin/bin/zplugin.zsh'
+source $HOME/.zplugin/bin/zplugin.zsh
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 ### End of Zplugin's installer chunk
@@ -125,7 +125,22 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 alias l='colorls --group-directories-first --almost-all'
 alias ll='colorls --group-directories-first --almost-all --long'
-
+alias python='python3'
 
 export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/Documents/go
+export GOPATH=$HOME/programming/go
+export progdir=$HOME/programming
+
+
+
+
+
+export DOCKER_HOST=tcp://localhost:2375
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+
+# https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md
+# Spaceship customisation and stuff
+SPACESHIP_USER_SHOW=always
