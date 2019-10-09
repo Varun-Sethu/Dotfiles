@@ -130,9 +130,9 @@ alias python='python3'
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/programming/go
 export progdir=$HOME/programming
+export WinHome=/mnt/c/Users/$USER/linux 
 
-
-
+cd ~
 
 
 export DOCKER_HOST=tcp://localhost:2375

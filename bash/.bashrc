@@ -115,6 +115,15 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export DOCKER_HOST=tcp://localhost:2375
-export GOPATH=/mnt/c/Users/varun/linux/programming/go
 
+cd ~
+
+
+export DOCKER_HOST=tcp://localhost:2375
+export GOPATH=$HOME/programming/go
+export GOBIN=/usr/local/go/bin
+export PATH=$PATH:$GOBIN
+export JAVA_HOME=/usr/local/jdk
+export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$PATH:/home/varun/programming/minecraft-server/minecraft.sh
+export PATH=$PATH:/home/varun/minecraft
