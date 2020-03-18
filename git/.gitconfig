@@ -1,5 +1,5 @@
 [user]
-	email = varun.sethu1@education.nsw.gov,au
+	email = varun.sethu1@education.nsw.gov.au
 	name = Varun-Sethu
 [core]
 	editor = vim
@@ -8,3 +8,5 @@
 	template = /home/varun/.gitcommitmessage.txt
 [push]
 	default = simple
+[credential]
+	helper = cache

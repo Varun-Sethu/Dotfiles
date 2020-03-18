@@ -119,7 +119,7 @@ fi
 cd ~
 
 
-export DOCKER_HOST=tcp://localhost:2375
+# export DOCKER_HOST=tcp://localhost:2375
 export GOPATH=$HOME/programming/go
 export GOBIN=/usr/local/go/bin
 export PATH=$PATH:$GOBIN
@@ -127,3 +127,8 @@ export JAVA_HOME=/usr/local/jdk
 export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:/home/varun/programming/minecraft-server/minecraft.sh
 export PATH=$PATH:/home/varun/minecraft
+export GO111MODULE="on" 
+
+# X-Server stuff
+export DISPLAY="$(grep nameserver /etc/resolv.conf | awk '{print $2}'):0"
+export LIBGL_ALWAYS_INDIRECT=0

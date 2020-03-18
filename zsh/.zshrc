@@ -131,12 +131,15 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/programming/go
 export progdir=$HOME/programming
 export WinHome=/mnt/c/Users/$USER/linux 
+export PATH=$PATH:$GOPATH/bin
 
 cd ~
 
 
-export DOCKER_HOST=tcp://localhost:2375
-
+# export DOCKER_HOST=tcp://localhost:2375
+# X-Server Stuff
+export DISPLAY="$(grep nameserver /etc/resolv.conf | awk '{print $2}'):0"
+export LIBGL_ALWAYS_INDIRECT=0
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
@@ -144,3 +147,4 @@ export DOCKER_HOST=tcp://localhost:2375
 # https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md
 # Spaceship customisation and stuff
 SPACESHIP_USER_SHOW=always
+export GO111MODULE="on" 
