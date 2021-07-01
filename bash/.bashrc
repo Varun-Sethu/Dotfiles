@@ -132,3 +132,4 @@ export GO111MODULE="on"
 # X-Server stuff
 export DISPLAY="$(grep nameserver /etc/resolv.conf | awk '{print $2}'):0"
 export LIBGL_ALWAYS_INDIRECT=0
+source "$HOME/.cargo/env"

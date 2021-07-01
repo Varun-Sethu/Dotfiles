@@ -22,6 +22,8 @@ Plugin 'fatih/vim-go'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'vim-python/python-syntax'
 
+Plugin 'eagletmt/ghcmod-vim'
+
 " Code completion
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'davidhalter/jedi-vim'
@@ -79,7 +81,12 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
 "automatically include closing brace
-inoremap { {<Space>}
+inoremap { {}<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap " ""<left>
+inoremap ' ''<left>
+
 
 " YCM remove the preview window upon selection
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
